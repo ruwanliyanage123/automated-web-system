@@ -1,0 +1,93 @@
+body{
+	margin-top:-20px;
+	margin-left:-20px;
+	width:200px;
+	height:100px;
+	background:url("../images/body1.jpg") no-repeat;
+}
+
+#container{
+	margin:auto;
+	margin-top:300px;
+	margin-left:625px;
+	width:800px;
+	height:262px;
+	text-align:left;
+	font-family:Verdana, Arial;
+	font-weight:normal;
+	font-size:12px;
+	color:#ffffff;
+}
+
+.username-text{
+	width:100px;
+	height:20px;
+	float:left;
+	margin-top:-5px;
+	margin-left:50px;
+}
+
+.password-text{
+	width:100px;
+	height:20px;
+	float:left;
+	margin-top:40px;
+	margin-left:-100px;
+}
+
+.username-field{
+	width:100px;
+	height:20px;
+	float:left;
+	margin-top:5px;
+	margin-left:-210px;
+}
+.password-field{
+	width:100px;
+	height:20px;
+	float:left;
+	margin-top:50px;
+	margin-left:-210px;
+}
+
+
+input[type="text"], input[type="text"]{
+	width:300px;
+	height:16px;
+	margin-top:10px;
+	margin-left:-20px;
+	font-family:Verdana, Arial;
+	font-size:16px;
+	color:#2d2d2d;
+}
+
+input[type="text"], input[type="password"]{
+	width:300px;
+	height:16px;
+	margin-top:10px;
+	margin-left:10px;
+	font-family:Verdana, Arial;
+	font-size:16px;
+	color:#2d2d2d;
+}
+
+input[type="submit"]{
+	width:100px;
+	height:25px;
+	margin-top:95px;
+	margin-left:-115px;
+	font-family:Verdana, Arial;
+	font-size:15px;
+	color:#ffffff;
+	background:#6ccdf1;
+}
+
+input[type="submit"]:hover, input[type="submit"]:focus{
+	background:#c1fb24 top left no-repeat;
+}
+
+
+
+
+
+

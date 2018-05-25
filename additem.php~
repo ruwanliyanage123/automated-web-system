@@ -1,0 +1,77 @@
+<?php
+$connection = mysqli_connect("localhost","root","","siyapatha");
+
+if(isset($_POST['item_name'])){
+	$id = $_POST['id'];
+	$type = $_POST['type'];
+	$item_name = $_POST['item_name'];
+	$item_price= $_POST['item_price'];
+
+
+	$sql = "INSERT INTO items(id,item_name,item_type, item_price) VALUES
+	('$id','$item_name','$type','$item_price')";
+
+	$result = mysqli_query($connection,$sql);
+	if($result){
+			echo "submitted successfully";
+	}
+	else{
+		echo "failed";
+	}
+
+}
+mysqli_close($connection);
+?>
+<?php ?>
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>add an item</title>
+</head>
+<body>
+
+<div id="container">
+	<a href="/siyapatha/index.php">HOME</a>
+	<div class="dropdown">
+		<button class="dropbtn">ADD</button>
+		<div class="dropdown-content">
+			<a href="siyapatha/addrecord.php">RECORD</a>
+			<a href="siyapatha/additem.php">ITEM</a>
+			<a href="siyapatha/addorder.php">OEDER</a>
+			<a href="siyapatha/adduser.php">USER</a>
+		</div>
+
+		<div>
+			<a href="siyapatha/addrecord.php">ITEMS</a>
+			<a href="siyapatha/additem.php">CUSTOMERS</a>
+			<a href="siyapatha/addorder.php">UPDATE</a>
+			<a href="siyapatha/adduser.php">BRANCH</a>
+		</div>
+
+		<div class="box">
+			<h1 align="center">ADD NEW ITEM RECORD</h1>
+			<form method="post" action="additem.php">
+				<label for="id">ITEM ID____</label>
+				<input type="text" name="id" ><br>
+				<label for="type">ITEM TYPE_</label>
+				<select name="type">
+					<option value="chair">CHAIR</option>
+					<option value="table">TABLE</option>
+					<option value="table">CUPBORD</option>
+					<option value="door">DOOR</option>
+					<option value="window">WINDOW</option>
+				</select><br>
+				<label for="item_name">ITEM NAME</label>
+				<input type="text" name="item_name"><br>
+				<label for="item_price">ITEM PRICE.</label>
+				<input type="number" name="item_price" min="0"><br>
+
+				<p>
+				<input type="submit" name="submit" value="ADD"/>
+				<input type="reset" name="reset" value="CLEAR FORM">
+			</form>
+		</div>
+
+</body>
+</html>
