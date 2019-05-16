@@ -1,6 +1,6 @@
 <?php
 
-echo "huththo";
+
 include('login.php');
 if(isset($_SESSION['login.php'])){
 	header("location:/siyapatha/index.php");
